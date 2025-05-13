@@ -1,0 +1,17 @@
+<form [formGroup]="loginForm">
+<label for="_usuario">User</label>
+<input id="_usuario" type="text" formControlName="_usuario" />
+
+<label for="_senha">Password</label>
+<input id="_senha" type="password" formControlName="_senha" />
+
+<button type="button" (click)="login()">Autenticar</button>
+
+</form>
+
+@if(this.status == true ){
+  <p> Bem-vindo, {{usuario}}</p>
+ } @else{
+  <p>Usuário inválido.</p>
+ }
+
